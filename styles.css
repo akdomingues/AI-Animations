@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap'); /* importa a fonte poppins do google fonts */
+
+* {
+  box-sizing: border-box; 
+  transition: all 0.3s ease; 
+}
+
+body {
+  background-color: #0f1221; /* cor de fundo */
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* define fontes */
+  height: 100%; /* altura */
+  padding: 20px; /* espaçamento interno */
+  max-width: 1200px; /* largura máxima da página */
+  margin: 0 auto; /* centraliza horizontalmente */
+  color: #ffffff; /* cor padrão do texto */
+  animation: fadeIn 0.8s ease-out; /* animação de entrada */
+}
+
+main {
+  display: flex; /* layout em flexbox */
+  gap: 20px; /* espaçamento entre as seções */
+  margin-bottom: 30px; /* espaço abaixo do main */
+  flex-wrap: wrap; /* permite quebra de linha no flexbox */
+}
+
+h1 {
+  text-align: center; /* centraliza o título */
+  font-size: 36px; /* tamanho */
+  color: #ffffff; /* cor */
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4); /* sombra no texto */
+  letter-spacing: 1px; /* espaçamento entre letras */
+  margin-bottom: 20px; /* espaço abaixo do título */
+}
+
+h1:hover {
+  color: #60a5fa; /* muda a cor do título ao passar o mouse */
+}
+
+h2 {
+  color: #ffffff; /* cor */
+  margin-bottom: 20px; /* espaço inferior */
+  font-size: 24px; /* tamanho do subtítulo */
+  border-left: 4px solid #6366f1; /* borda lateral roxa */
+  padding-left: 12px; /* espaço após a borda */
+  font-weight: 600; /* negrito */
+}
+
+.sessaomaior {
+  background: linear-gradient(135deg, #1e293b, #0f172a); /* gradiente de fundo */
+  width: 100%; /* ocupa toda a largura */
+  border-radius: 12px; /* bordas arredondadas */
+  padding: 20px; /* espaçamento interno */
+  height: 200px; /* altura fixa */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* sombra externa */
+  color: #ffffff; /* cor */
+}
+
+.sessaomaior:hover {
+  transform: translateY(-5px); /* eleva o bloco levemente no hover */
+}
+
+.areacod {
+  background: #0f172a; /* fundo escuro */
+  height: calc(100% - 70px); /* calcula altura restante do container */
+  border-radius: 12px; /* arredondamento */
+  padding: 20px; /* espaço interno */
+  color: #ffffff; /* cor do texto */
+  font-size: 14px; /* tamanho da fonte */
+  overflow-y: auto; /* scroll vertical se necessário */
+  box-shadow: inset 0 0 10px rgba(148, 163, 184, 0.1); /* sombra interna leve */
+}
+
+.areacod:hover {
+  background: #1e293b; /* fundo muda no hover */
+}
+
+.arearesult {
+  background: #1e1e2e; /* cor de fundo */
+  height: calc(100% - 70px); /* calcula altura restante do container */
+  border-radius: 12px; /* arredondamento */
+  display: flex; /* layout flexível */
+  align-items: center; /* alinha ao centro verticalmente */
+  justify-content: center; /* centraliza horizontalmente */
+  color: #cbd5e1; /* cor do texto */
+  font-weight: bold; /* texto em negrito */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* sombra leve */
+}
+
+.sessaomenor {
+  background: linear-gradient(145deg, #1e293b, #334155); /* gradiente escuro */
+  border-radius: 12px; /* arredondamento */
+  padding: 20px; /* espaço interno */
+  display: flex; /* flexbox para alinhar input e botão */
+  flex-wrap: wrap; /* quebra se necessário */
+  gap: 15px; /* espaço entre elementos */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* sombra externa */
+  color: #ffffff; /* cor do texto */
+}
+
+input {
+  width: 80%; /* ocupa 80% do espaço */
+  padding: 15px 20px; /* espaçamento interno */
+  font-size: 16px; /* tamanho da fonte */
+  color: #ffffff; /* texto branco */
+  border-radius: 6px; /* arredondamento */
+  border: 2px solid #3b82f6; /* borda azul */
+  background-color: #1e293b; /* fundo escuro */
+  font-family: 'Poppins', sans-serif; /* fonte */
+}
+
+input::placeholder {
+  color: #94a3b8; /* cor do placeholder */
+}
+
+input:focus {
+  outline: none; /* remove borda padrão */
+  border-color: #7c3aed; /* borda roxa no foco */
+  box-shadow: 0 0 10px rgba(124, 58, 237, 0.6); /* brilho ao redor */
+}
+
+button {
+  background: linear-gradient(to right, #3b82f6, #7c3aed); /* gradiente azul-roxo */
+  border: none; /* remove borda */
+  color: #ffffff; /* texto branco */
+  padding: 15px 40px; /* tamanho do botão */
+  border-radius: 6px; /* arredondamento */
+  font-size: 16px; /* tamanho da fonte */
+  cursor: pointer; /* cursor de clique */
+  box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4); /* sombra */
+  font-family: 'Poppins', sans-serif; /* fonte */
+  position: relative; /* necessário para o ::after */
+  overflow: hidden; /* oculta overflow da animação */
+}
+
+button:hover {
+  transform: scale(1.05); /* efeito de crescimento ao passar o mouse */
+  background: linear-gradient(to right, #2563eb, #8b5cf6); /* nova cor no hover */
+}
+
+button::after {
+  content: ''; /* elemento decorativo */
+  position: absolute; /* posicionado em relação ao botão */
+  width: 100%; height: 100%; /* tamanho total */
+  top: -100%; /* começa fora do botão */
+  left: 0;
+  background: rgba(255, 255, 255, 0.1); /* brilho leve */
+  transition: top 0.3s ease; /* animação suave */
+}
+
+button:hover::after {
+  top: 0; /* animação de brilho ao passar o mouse */
+}
+
+@keyframes fadeIn { /* animação inicial da página */
+  from {
+    opacity: 0; /* começa invisível */
+    transform: translateY(10px); /* um pouco mais abaixo */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* volta à posição original */
+  }
+}
+
+@media (max-width: 768px) { /* responsividade para telas menores */
+  main {
+    flex-direction: column; /* empilha os elementos */
+  }
+
+  input {
+    width: 100%; /* input ocupa toda a largura */
+  }
+
+  button {
+    width: 100%; /* botão ocupa toda a largura */
+  }
+}
