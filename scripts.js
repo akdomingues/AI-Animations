@@ -1,4 +1,4 @@
-let webhook = "https://cauabdomingues.app.n8n.cloud/webhook/animação-css"; // URL do webhook onde será feita a requisição
+let webhook = "YOUR WEBHOOK URL"; // URL do webhook onde será feita a requisição
 
 async function clickBotao() {
   let textoInput = document.querySelector(".inputdescricao").value; // pega o valor digitado no input
