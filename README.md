@@ -56,6 +56,12 @@ This project is a dynamic and responsive animation generator designed for develo
 
 ---
 
+## 🌐 Live Demo  
+
+👉 Access the site here: https://akdomingues.github.io/AI-Animations
+
+---
+
 ## 🚀 How to Run
 
 1. Clone the repository
